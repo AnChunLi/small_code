@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>深度学习</title>
+		<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			table{
+				width: 100px;
+				height: 100px;
+				border: solid red 2px;
+			}
+			table td{
+				text-align: center;
+				color: #fff;
+			}
+			table td .content{
+				display: flex;
+			}
+			table td .num{
+				width: 50px;
+				height: 50px;
+			}
+			table td .add{
+				color: #000;
+			}
+			table font{
+				text-align: center;
+				color: #000;
+			}
+			#showresult{
+				text-align: center;
+			}
+			#showresult1{
+				width: 50px;
+				height: 50px;
+			}
+		</style>
+	</head>
+	<body>
+			<div style="width:420px;height: 420px;border: solid 1px #404040;cursor: pointer;"id="mainbox"></div>
+			
+			<div style="position: absolute;top: 10px;left: 450px;">
+				<table>
+					<tr>
+						<td>
+							<div class="content">	
+								<div class="num"></div>
+								<div class="add">+</div>
+							</div>
+							<font>*0</font>
+						</td>
+						<td>
+							<div class="content">	
+								<div class="num"></div>
+								<div class="add">+</div>
+							</div>
+							<font>*-1</font>
+						</td>
+						<td>
+							<div class="content">	
+								<div class="num"></div>
+								<div class="add">+</div>
+							</div>
+							<font>*0</font>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="content">	
+								<div class="num"></div>
+								<div class="add">+</div>
+							</div>
+							<font>*-1</font>
+						</td>
+						<td>
+							<div class="content">	
+								<div class="num"></div>
+								<div class="add">+</div>
+							</div>
+							<font>*5</font>
+						</td>
+						<td>
+							<div class="content">	
+								<div class="num"></div>
+								<div class="add">+</div>
+							</div>
+							<font>*-1</font>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="content">	
+								<div class="num"></div>
+								<div class="add">+</div>
+							</div>
+							<font>*0</font>
+						</td>
+						<td>
+							<div class="content">	
+								<div class="num"></div>
+								<div class="add">+</div>
+							</div>
+							<font>*-1</font>
+						</td>
+						<td>
+							<div class="content">	
+								<div class="num"></div>
+								<div class="add">+</div>
+							</div>
+							<font>*0</font>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div style="position: absolute;top: 300px;left: 500px;display: flex;">=
+				<div id="showresult"></div>
+				<div id="showresult1"></div>
+			</div>
+			<div style="width:420px;height: 420px;border: solid 1px #404040;cursor: pointer;position: absolute;top:0;left: 680px;"id="antherbox"></div>
+
+		
+		<script>
+			for(var i=0;i<21;i++)
+			{
+				for(var j=0;j<21;j++)
+				{
+					var color=random();
+					$('#mainbox').append(
+						"<div class='box'style='background-color:rgb("+color+","+color+","+color+");font-size:10px;text-align:center;width:20px;height:20px;color:transparent;position: absolute;top: "+j*20+"px;left:"+i*20+"px'>"+color+"</div>"
+					);
+				}
+			}
+//			自动计算卷积值
+			var arrays=[];
+			var indexs=[];
+			for(var i=0;i<21;i++)
+			{
+				for(var j=0;j<21;j++)
+				{
+					var index=i*21+j;
+					indexs.push(index);
+					var center=$('#mainbox').find('div').eq(index).text();
+					var top1=$('#mainbox').find('div').eq(index-1).text();
+					var bottom=$('#mainbox').find('div').eq(index+1).text();
+					var left=$('#mainbox').find('div').eq(index-21).text();
+					var right=$('#mainbox').find('div').eq(index+21).text();
+					var top_left=$('#mainbox').find('div').eq(index-22).text();
+					var bottom_left=$('#mainbox').find('div').eq(index-20).text();
+					var top_right=$('#mainbox').find('div').eq(index+20).text();
+					var bottom_right=$('#mainbox').find('div').eq(index+22).text();
+					var arr=[top_left,top1,top_right,left,center,right,bottom_left,bottom,bottom_right];
+					arrays.push(convolution(arr));
+				}
+			}
+//			console.log(arrays);
+//			卷积后的图
+			for(var i=0;i<21;i++)
+			{
+				for(var j=0;j<21;j++)
+				{
+					var color=arrays[i*21+j];
+					if(color>255)
+					{
+						color=255;
+					}
+					else if(color<0)
+					{
+						color=0;
+					}
+					$('#antherbox').append(
+						"<div class='box1'style='background-color:rgb("+color+","+color+","+color+");font-size:10px;text-align:center;width:20px;height:20px;color:transparent;position: absolute;top: "+j*20+"px;left:"+i*20+"px'>"+color+"</div>"
+					);
+//					console.log(color);
+				}
+			}
+//			border:0.5px solid #000;
+			var x,y;
+			$('.box').mouseenter(function(e){
+				e.stopPropagation();
+				var index=$(this).index();
+//				console.log("选取的index:"+index);
+				anotherbright(index);
+//				变亮
+				var borderstyle="red 3px solid";
+				$('#mainbox').find('div').eq(index-1).css("border-top",borderstyle);
+				$('#mainbox').find('div').eq(index+1).css("border-bottom",borderstyle);
+				$('#mainbox').find('div').eq(index-21).css("border-left",borderstyle);
+				$('#mainbox').find('div').eq(index+21).css("border-right",borderstyle);
+				$('#mainbox').find('div').eq(index-22).css({"border-left":borderstyle,"border-top":borderstyle});
+				$('#mainbox').find('div').eq(index+20).css({"border-right":borderstyle,"border-top":borderstyle});
+				$('#mainbox').find('div').eq(index-20).css({"border-bottom":borderstyle,"border-left":borderstyle});
+				$('#mainbox').find('div').eq(index+22).css({"border-bottom":borderstyle,"border-right":borderstyle});
+//				四周的值
+				var center=$(this).text();
+				var top=$('#mainbox').find('div').eq(index-1).text();
+				var bottom=$('#mainbox').find('div').eq(index+1).text();
+				var left=$('#mainbox').find('div').eq(index-21).text();
+				var right=$('#mainbox').find('div').eq(index+21).text();
+				var top_left=$('#mainbox').find('div').eq(index-22).text();
+				var bottom_left=$('#mainbox').find('div').eq(index-20).text();
+				var top_right=$('#mainbox').find('div').eq(index+20).text();
+				var bottom_right=$('#mainbox').find('div').eq(index+22).text();
+				var arr=[top_left,top,top_right,left,center,right,bottom_left,bottom,bottom_right];
+				for(var i=0; i<9;i++)
+				{
+					$('table').find('.num').eq(i).text(arr[i]);
+					$('table').find('.num').eq(i).css("background-color","rgb("+arr[i]+","+arr[i]+","+arr[i]+")");
+				}
+//				console.log(arr);
+				var result=convolution(arr);
+				$('#showresult').text(result);
+				$('#showresult1').css("background-color","rgb("+result+","+result+","+result+")");
+			});
+//			恢复样式
+			$('.box').mouseleave(function(){
+				var index=$(this).index();
+				restore(index);
+//				var overstyle="#000 1px solid";
+				var overstyle="";
+				$('#mainbox').find('div').eq(index-1).css("border-top",overstyle);
+				$('#mainbox').find('div').eq(index+1).css("border-bottom",overstyle);
+				$('#mainbox').find('div').eq(index-21).css("border-left",overstyle);
+				$('#mainbox').find('div').eq(index+21).css("border-right",overstyle);
+				$('#mainbox').find('div').eq(index-22).css({"border-left":overstyle,"border-top":overstyle});
+				$('#mainbox').find('div').eq(index+20).css({"border-right":overstyle,"border-top":overstyle});
+				$('#mainbox').find('div').eq(index-20).css({"border-bottom":overstyle,"border-left":overstyle});
+				$('#mainbox').find('div').eq(index+22).css({"border-bottom":overstyle,"border-right":overstyle});
+			});
+//			实现右边对应
+			$('.box1').mouseenter(function(){
+				var index=$(this).index();
+				$(this).css("border","red 2px solid");
+				var borderstyle="red 3px solid";
+				$('#mainbox').find('div').eq(index-1).css("border-top",borderstyle);
+				$('#mainbox').find('div').eq(index+1).css("border-bottom",borderstyle);
+				$('#mainbox').find('div').eq(index-21).css("border-left",borderstyle);
+				$('#mainbox').find('div').eq(index+21).css("border-right",borderstyle);
+				$('#mainbox').find('div').eq(index-22).css({"border-left":borderstyle,"border-top":borderstyle});
+				$('#mainbox').find('div').eq(index+20).css({"border-right":borderstyle,"border-top":borderstyle});
+				$('#mainbox').find('div').eq(index-20).css({"border-bottom":borderstyle,"border-left":borderstyle});
+				$('#mainbox').find('div').eq(index+22).css({"border-bottom":borderstyle,"border-right":borderstyle});
+//				四周的值
+				var center=$('#mainbox').find('div').eq(index).text();
+				var top=$('#mainbox').find('div').eq(index-1).text();
+				var bottom=$('#mainbox').find('div').eq(index+1).text();
+				var left=$('#mainbox').find('div').eq(index-21).text();
+				var right=$('#mainbox').find('div').eq(index+21).text();
+				var top_left=$('#mainbox').find('div').eq(index-22).text();
+				var bottom_left=$('#mainbox').find('div').eq(index-20).text();
+				var top_right=$('#mainbox').find('div').eq(index+20).text();
+				var bottom_right=$('#mainbox').find('div').eq(index+22).text();
+				var arr1=[top_left,top,top_right,left,center,right,bottom_left,bottom,bottom_right];
+//				console.log(arr1);
+				for(var i=0; i<9;i++)
+				{
+					$('table').find('.num').eq(i).text(arr1[i]);
+					$('table').find('.num').eq(i).css("background-color","rgb("+arr1[i]+","+arr1[i]+","+arr1[i]+")");
+				}
+//				console.log(arr);
+				var result=convolution(arr1);
+				$('#showresult').text(result);
+				$('#showresult1').css("background-color","rgb("+result+","+result+","+result+")");
+			});
+			$('.box1').mouseleave(function(){
+				var index=$(this).index();
+				restore(index);
+//				var overstyle="#000 1px solid";
+				var overstyle="";
+				$('#mainbox').find('div').eq(index-1).css("border-top",overstyle);
+				$('#mainbox').find('div').eq(index+1).css("border-bottom",overstyle);
+				$('#mainbox').find('div').eq(index-21).css("border-left",overstyle);
+				$('#mainbox').find('div').eq(index+21).css("border-right",overstyle);
+				$('#mainbox').find('div').eq(index-22).css({"border-left":overstyle,"border-top":overstyle});
+				$('#mainbox').find('div').eq(index+20).css({"border-right":overstyle,"border-top":overstyle});
+				$('#mainbox').find('div').eq(index-20).css({"border-bottom":overstyle,"border-left":overstyle});
+				$('#mainbox').find('div').eq(index+22).css({"border-bottom":overstyle,"border-right":overstyle});
+			})
+//			卷积计算
+			function convolution(arr){
+//				卷积核
+				var kernels=[0,-1,0,-1,5,-1,0,-1,0];
+				var sum=0;
+				for(var i=0;i<9;i++)
+				{
+					sum+=arr[i]*kernels[i];
+				}
+				return sum;
+			}
+			function random(){
+				var min=100;
+				var max=255;
+				var num=parseInt(Math.floor(min+Math.random()*(max-min)));
+				return num;
+			}
+//			让卷积后的值对应变量
+			function anotherbright(index){
+//				if((index-22)%3==0||index==0)
+//				{
+////					求在卷积后图中所对应的位置
+					var antherindex=indexs.indexOf(index);
+					$('#antherbox').find('div').eq(antherindex).css("border","red 2px solid");
+//					console.log(index);
+//				}
+			}
+//			恢复卷积后图片的边框
+			function restore(index){
+//				if((index-22)%3==0||index==0)
+//				{
+//					求在卷积后图中所对应的位置
+					var antherindex=indexs.indexOf(index);
+					$('#antherbox').find('div').eq(antherindex).css("border","");
+//				}
+			}
+		</script>
+	</body>
+</html>
