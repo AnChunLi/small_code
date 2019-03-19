@@ -1,0 +1,8 @@
+<!--pages/zuche/zuche.wxml-->
+<view class='bycyclelist'wx:for='{{bycyclelist}}'bindtap='zuche'data-id='{{item.id}}'>
+  <image src='https://1758541396.cn/{{item.image}}'></image>
+  <view class='main'>
+    <view class='name'>{{item.name}}</view>
+    <view class='zucheprice'>￥{{item.zucheprice}}</view>
+  </view>
+</view>

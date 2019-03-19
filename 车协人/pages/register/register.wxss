@@ -1,0 +1,61 @@
+/* pages/register/register.wxss */
+.body
+{
+  background-color: #eee;
+  height: 820px;
+}
+input,picker
+{
+  background-color: #ffffff;
+  height: 35px;
+  margin: 8px auto;
+  font-size: 18px;
+  padding-left: 25%;
+}
+.labels
+{
+  position: absolute;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+}
+.labels label
+{
+  margin-bottom: 19px;
+  margin-left: 5px;
+}
+.btn-area
+{
+  margin: 35px auto;
+  width: 30%;
+}
+.subbtn
+{
+  background-color: #1296db;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+.chooseimage
+{
+  height: 35px;
+  padding: 0;
+  display: flex;
+}
+.chooseimage image
+{
+  width: 40px;
+  height: 30px;
+  margin: 10px 2px;
+}
+.chooseimage text
+{
+  font-size: 15px;
+  margin: 15px 1px;
+}
+.img
+{
+  width: 300px;
+  height: 200px;
+  margin: 5px 8%;
+  border-radius: 5px;
+}

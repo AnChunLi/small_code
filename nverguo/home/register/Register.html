@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>新用户注册</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+        .title {
+
+            /* background-color: coral; */
+            border-bottom: 1px gray dashed;
+            font-size: 25px;
+            padding: 15px 30px;
+        }
+
+        body {
+            background: url(../public/img/bgpic.jpg);
+            /*background-attachment: fixed;*/
+            background-size: cover;
+            background-position: 0 0;
+        }
+
+
+    </style>
+
+    <script type="text/javascript" language="javascript">
+
+
+    </script>
+
+
+</head>
+
+
+<body>
+
+<!--进度信息-->
+<div class="container" style="margin-top: 100px">
+    <div class="row">
+        <div class="col-md-offset-3 col-md-2">
+            <strong style="color: #ebcccc">1、协议同意</strong>
+        </div>
+
+        <div class="col-md-offset-1 col-md-2">
+            <strong style="color: #ebcccc">2、信息填写</strong>
+        </div>
+
+        <div class="col-md-offset-1 col-md-2">
+            <strong style="color: #ebcccc">3、完成注册</strong>
+        </div>
+    </div>
+</div>
+<br>
+<!--进度条-->
+<div class="container">
+    <div class="row">
+        <div class="col-md-7 col-md-offset-3">
+            <div class="progress">
+                <div class="progress-bar  " id="part1Pgbar" role="progressbar" aria-valuenow="30"
+                     aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
+                    <span class="sr-only">40% 完成</span>
+                </div>
+
+                <div class="progress-bar progress-bar-danger " id="part2Pgbar" role="progressbar" aria-valuenow="30"
+                     aria-valuemin="0" aria-valuemax="100" style="width: ;">
+                    <span class="sr-only">40% 完成</span>
+                </div>
+
+                <div class="progress-bar progress-bar-success" role="progressbar" id="part3Pgbar" aria-valuenow="30"
+                     aria-valuemin="0" aria-valuemax="100" style="width: ;">
+                    <span class="sr-only">40% 完成</span>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<!--注册主体信息-->
+<div class="container">
+    <div class="row">
+        <div class="col-md-5 col-md-offset-4">
+            <div class="well well-lg">
+                <div class="login">
+                    <div class="title">
+                        <span class="glyphicon glyphicon-pencil logo" style="color: orangered;margin-left: 80px"></span>
+                        <span >用户注册&nbsp;&nbsp;&nbsp;</span>
+
+                        <small style="font-size: small;"><a href="../login/Login.html">已有账号,直接登录</a> </small>
+                    </div>
+                    <div>
+
+                    </div>
+                    <br>
+                    <div class="container-fluid">
+                        <form id="defaultForm" method="post" action="register.php">
+                            <div class="form-group">
+                                <label for="username">用户名</label>
+                                <input type="text" class="form-control " id="username" name="username"
+                                       placeholder="用户名">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">密码</label>
+                                <input type="password" class="form-control" id="password" name="password"
+                                       placeholder="密码，长度为8-16位字母或数字">
+                            </div>
+                            <div class="form-group">
+                                <label for="confirmPassword">确认密码</label>
+                                <input type="password" class="form-control" id="confirmPassword" name="confirmPassword"
+                                       placeholder="Password" required="required">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">手机</label>
+                                <input type="text" class="form-control" id="phone" name="phone" placeholder="phone">
+                            </div>
+                            <div style="text-align: center;">
+                                <button type="submit" class="btn btn-success " id="validateBtn">注册</button>
+                                <button type="reset" class="btn btn-danger " id="resetBtn" style="margin-left: 20px">
+                                    重新填写
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--模态框-->
+<div class="modal fade" id="protocolModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">
+                    用户注册协议
+                </h4>
+            </div>
+            <div class="modal-body pre-scrollable">
+
+                在这里添加用户协议内容
+                我已阅读并同意该用户协议 <br>我已阅读并同意该用户协议 <br>我已阅读并同意该用户协议
+                我已阅读并同意该用户协议 <br>我已阅读并同意该用户协议 <br>我已阅读并同意该用户协议
+                我已阅读并同意该用户协议 <br>我已阅读并同意该用户协议 <br>我已阅读并同意该用户协议
+                我已阅读并同意该用户协议 <br>我已阅读并同意该用户协议 <br>我已阅读并同意该用户协议
+                我已阅读并同意该用户协议 <br>我已阅读并同意该用户协议 <br>我已阅读并同意该用户协议
+                我已阅读并同意该用户协议 <br>我已阅读并同意该用户协议 <br>我已阅读并同意该用户协议
+                我已阅读并同意该用户协议 <br>我已阅读并同意该用户协议 <br>我已阅读并同意该用户协议
+                我已阅读并同意该用户协议 <br>我已阅读并同意该用户协议 <br>我已阅读并同意该用户协议
+                我已阅读并同意该用户协议 <br>我已阅读并同意该用户协议 <br>我已阅读并同意该用户协议
+                我已阅读并同意该用户协议 <br>我已阅读并同意该用户协议 <br>我已阅读并同意该用户协议
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" id="agreeBtn">同意并注册
+                </button>
+                <button type="button" class="btn btn-danger" id="notagreeBtn">
+                    不同意并返回
+                </button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.min.js"></script>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        // 验证表单的规则
+        $('#defaultForm').bootstrapValidator({
+            // live: 'enabled',
+            message: '输入的值无效',
+            feedbackIcons: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+
+                username: {
+                    message: '用户名无效',
+                    validators: {
+                        notEmpty: {
+                            message: '请输入用户名'
+                        },
+                        stringLength: {
+                            min: 6,
+                            max: 30,
+                            message: '用户名长度在 6-30 个字符之间'
+                        },
+                        regexp: {
+                            regexp: /^[a-zA-Z0-9_\.]+$/,
+                            message: '用户名包含特殊字符'
+                        },
+//                      remote: {
+//                          type: 'POST',
+//                          url: 'register.php',
+//                          message: '用户名不可用'
+//                      },
+                        different: {
+                            field: 'password, confirmPassword',
+                            message: '用户名和密码不能相同'
+                        }
+                    }
+                },
+                
+                password: {
+                    validators: {
+                        notEmpty: {
+                            message: '请输入密码'
+                        },
+                        stringLength: {
+                            min: 6,
+                            max: 15,
+                            message: '密码长度在 6-15 个字符之间'
+                        },
+                        different: {
+                            field: 'username',
+                            message: '用户名和密码不能相同'
+                        }
+                    }
+                },
+                confirmPassword: {
+                    validators: {
+                        notEmpty: {
+                            message: '请确认密码'
+                        },
+                        identical: {
+                            field: 'password',
+                            message: '两次密码必须输入一致'
+                        },
+                        different: {
+                            field: 'username',
+                            message: '用户名和密码不能相同'
+                        }
+                    }
+                },
+                phone: {
+                    validators: {
+                        notEmpty: {
+                            message: "请输入手机号码"
+                        },
+                        stringLength: {
+                            min: 11,
+                            max: 11,
+                            message: "请输入11位手机号码"
+                        },
+                        regexp: {
+                            regexp: /^1[3|5|8]{1}[0-9]{9}$/,
+                            message: "请输入有效的手机号码"
+                        }
+                    }
+                }
+            }
+        });
+
+        // 重置表单验证
+        $('#resetBtn').click(function () {
+            $('#defaultForm').data('bootstrapValidator').resetForm(true);
+        });
+
+        //加载模态框
+        $('#protocolModal').modal('show');
+
+
+    });
+
+    $('#notagreeBtn').click(function () {
+        window.location.href = "../login/Login.html";
+    });
+
+    //控制不被外部关闭
+    $('#protocolModal').modal({backdrop: 'static', keyboard: false});
+
+    $('#agreeBtn').click(function () {
+        $('#part1Pgbar').css("width", "0%");
+        $('#part2Pgbar').css("width", "40%");
+        $('#part2Pgbar').addClass("col-md-offset-4");
+
+    })
+
+</script>
+
+
+</body>
+</html>

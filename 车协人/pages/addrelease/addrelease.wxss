@@ -1,0 +1,55 @@
+/* pages/addrelease/addrelease.wxss */
+.textarea
+{
+  width: 90%;
+  margin: 5% 5% 1% 5%;  
+  border: solid 1px #888;
+  border-radius: 5px;
+  background-color: #eee;
+}
+.bottom
+{
+  display:inline-flex;
+  margin-left: 6%;
+  width: 90%;
+}
+.bottom .addimage
+{
+  margin-right: 190px;
+}
+.btn
+{
+  display: flex;
+  padding: 0%;
+  background-color: #fff;
+  line-height: 30px
+}
+.btn::after
+{
+  border: none;
+}
+.btn text
+{
+  color: #1296db;
+  font-weight:700;
+  font-size: 20px;
+}
+image
+{
+  width: 40px;
+  height: 30px;
+}
+.block
+{
+   margin: 0 1.5%;
+  display: inline;
+  padding: 0;
+}
+.img
+{
+  width: 30%;
+  height: 100px;
+  border-radius: 5px;
+  margin: 0;
+  display:inline-flex;
+}

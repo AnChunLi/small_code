@@ -1,0 +1,9 @@
+<!--pages/changecolor/changecolor.wxml-->
+<view class='body'>
+  <form bindsubmit="formSubmit">
+    <input type='text'placeholder='请输入色值，如#fff'name='color'></input>
+    <view class="btn-area">
+      <button formType="submit"class='subbtn'>提交</button>
+    </view>
+  </form>
+</view>

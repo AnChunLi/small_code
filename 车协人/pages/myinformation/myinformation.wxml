@@ -1,0 +1,67 @@
+<!--pages/myinformation/myinformation.wxml-->
+<view class='list'>
+  <view class='member'>
+      <view class='level'><label>等级</label>
+          <text wx:if='{{member.level==1}}'>基本成员</text>
+          <text wx:elif='{{member.level==2}}'>进阶成员</text>
+          <text wx:elif='{{member.level==3}}'>老会员</text>
+          <text wx:elif='{{member.level==4}}'>前管理层</text>
+          <text wx:elif='{{member.level==5}}'>车队成员</text>
+          <text wx:elif='{{member.level==6}}'>友校大佬</text>
+          <text wx:elif='{{member.level==7}}'>友校高层</text>
+          <text wx:elif='{{member.level==8}}'>部长</text>
+          <text wx:elif='{{member.level==9}}'>副会长</text>
+          <text wx:elif='{{member.level==10}}'>会长</text>
+        <text wx:else>未审核</text>
+      </view>
+      <view class='baseinline'><label>姓名</label><text>{{member.name}}</text></view>
+      <view class='baseinline'wx:if='{{member.gender==0}}'><label>性别</label><text>男</text></view>
+      <view class='baseinline'wx:elif='{{member.gender==1}}'><label>性别</label><text>女</text></view>
+      
+      <view class='baseinline'wx:if="{{member.school==0}}"><label>学院</label><text>资环</text></view>
+    <view class='baseinline'wx:if="{{member.school==1}}"><label>学院</label><text>遥感</text></view>
+    <view class='baseinline'wx:if="{{member.school==2}}"><label>学院</label><text>测绘</text></view>
+    <view class='baseinline'wx:if="{{member.school==3}}"><label>学院</label><text>印包</text></view>
+    <view class='baseinline'wx:if="{{member.school==4}}"><label>学院</label><text>生科</text></view>
+    <view class='baseinline'wx:if="{{member.school==5}}"><label>学院</label><text>物院</text></view>
+    <view class='baseinline'wx:if="{{member.school==6}}"><label>学院</label><text>化院</text></view>
+    <view class='baseinline'wx:if="{{member.school==7}}"><label>学院</label><text>电信</text></view>
+    <view class='baseinline'wx:if="{{member.school==8}}"><label>学院</label><text>计院</text></view>
+    <view class='baseinline'wx:if="{{member.school==9}}"><label>学院</label><text>数院</text></view>
+    <view class='baseinline'wx:if="{{member.school==10}}"><label>学院</label><text>新传</text></view>
+    <view class='baseinline'wx:if="{{member.school==11}}"><label>学院</label><text>社会</text></view>
+    <view class='baseinline'wx:if="{{member.school==12}}"><label>学院</label><text>历史</text></view>
+    <view class='baseinline'wx:if="{{member.school==13}}"><label>学院</label><text>文院</text></view>
+    <view class='baseinline'wx:if="{{member.school==14}}"><label>学院</label><text>政管</text></view>
+    <view class='baseinline'wx:if="{{member.school==15}}"><label>学院</label><text>马院</text></view>
+    <view class='baseinline'wx:if="{{member.school==16}}"><label>学院</label><text>哲院</text></view>
+    <view class='baseinline'wx:if="{{member.school==17}}"><label>学院</label><text>国学</text></view>
+    <view class='baseinline'wx:if="{{member.school==19}}"><label>学院</label><text>经管</text></view>
+    <view class='baseinline'wx:if="{{member.school==20}}"><label>学院</label><text>法院</text></view>
+    <view class='baseinline'wx:if="{{member.school==21}}"><label>学院</label><text>外院</text></view>
+    <view class='baseinline'wx:if="{{member.school==22}}"><label>学院</label><text>动机</text></view>
+    <view class='baseinline'wx:if="{{member.school==23}}"><label>学院</label><text>药院</text></view>
+    <view class='baseinline'wx:if="{{member.school==24}}"><label>学院</label><text>基医</text></view>
+    <view class='baseinline'wx:if="{{member.school==25}}"><label>学院</label><text>健康</text></view>
+    <view class='baseinline'wx:if="{{member.school==26}}"><label>学院</label><text>口腔</text></view>
+    <view class='baseinline'wx:if="{{member.school==27}}"><label>学院</label><text>电气</text></view>
+    <view class='baseinline'wx:if="{{member.school==28}}"><label>学院</label><text>水院</text></view>
+    <view class='baseinline'wx:if="{{member.school==29}}"><label>学院</label><text>艺术</text></view>
+    <view class='baseinline'wx:if="{{member.school==30}}"><label>学院</label><text>城设</text></view>
+    <view class='baseinline'wx:if="{{member.school==31}}"><label>学院</label><text>土建</text></view>
+    <view class='baseinline'wx:if="{{member.school==33}}"><label>学院</label><text>弘毅</text></view>
+
+      <view class='baseinline'><label>年级</label><text>{{member.grade}}级</text></view>
+      <view class='connectblock'>
+      <view class='connect'><label>电话</label><text>{{member.tel}}</text></view>
+      <view class='connect'><label>QQ</label><text>{{member.qq}}</text></view>
+      <view class='connect'><label>地址</label><text>{{member.sushe}}</text></view>
+      </view>
+      <view><label>校园卡照片</label></view>
+      <image src='https://1758541396.cn/{{member.schoolcard}}'wx:if='{{member.schoolcard.length!=0}}'></image>
+      <text wx:else class='nocard'>暂无上传校园卡！</text>
+  </view>
+  <view >
+    <button bindtap="update"class='add'><text>修改资料</text></button>
+  </view>
+</view>

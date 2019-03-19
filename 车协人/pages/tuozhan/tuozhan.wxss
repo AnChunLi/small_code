@@ -1,0 +1,37 @@
+/* pages/tuozhan/tuozhan.wxss */
+.body
+{
+  background-color: #eee;
+  height: 680px;
+}
+input,picker
+{
+  background-color: #ffffff;
+  height: 35px;
+  margin: 8px auto;
+  font-size: 15px;
+  padding-left: 5%;
+}
+.labels
+{
+  position: absolute;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+}
+.labels label
+{
+  margin-bottom: 19px;
+  margin-left: 5px;
+}
+.btn-area
+{
+  margin: 35px auto;
+  width: 30%;
+}
+.subbtn
+{
+  background-color: #1296db;
+  color: #ffffff;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,55 @@
+/* pages/repair/repair.wxss */
+image
+{
+  width: 64px;
+  height: 64px;
+  margin: 10% 43% 0 41%;
+}
+text{
+  margin: 0% 40%;
+}
+.order
+{
+  width: 80%;
+  margin: 10px auto;
+  border: 2rpx solid #eee;
+  border-radius: 10px;
+  background-color: #eee;
+  font-size: 16px;
+}
+.btn-area
+{
+  margin: 15px 0 0 0;
+}
+.subbtn
+{
+  background-color: #1296db;
+  color: #ffffff;
+  margin-bottom: 0px;
+  width: 35%;
+}
+.tips
+{
+  color: 	#8E8E8E;
+  font-size: 12px;
+  margin-top: 15px;
+  padding: 0;
+  display: flex;
+flex-direction: row;
+}
+.tips image
+{
+  width: 16px;
+  height: 16px;
+  /* position: absolute;
+  left: -25px;
+  top: 363px; */
+  padding: 0;
+}
+.tips text
+{
+  padding: 0;
+  /* position: absolute;
+  left: 0;
+  top: 400px; */
+}

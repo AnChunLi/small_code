@@ -1,0 +1,42 @@
+<!--pages/application/application.wxml-->
+<view class='top'>
+  <swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}"circular="true">
+    <block wx:for="{{banner}}">
+      <swiper-item>
+        <image src="https://1758541396.cn/{{item.image}}" class="slide-image"bindtap='bannerfunction'id='{{item.src}}' />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class='applist'>
+  <view class='item' bindtap='intorepair'>
+    <view class='logo'>
+      <image src='../../image/repairapp.png'></image>
+    </view>
+    <view class='text'>维修预约</view>
+  </view>
+
+  <view class='item' bindtap='intomap'>
+    <view class='logo'>
+      <image src='../../image/position.png'></image>
+    </view>
+    <view class='text'>集合点</view>
+  </view>
+
+  <view class='item' bindtap='intozuche'>
+    <view class='logo'>
+      <image src='../../image/zuche.png'></image>
+    </view>
+    <view class='text'>租车</view>
+  </view>
+
+  <view class='item' bindtap='intotuozhan'>
+    <view class='logo'>
+      <image src='../../image/form.png'></image>
+    </view>
+    <view class='text'>拓展表单</view>
+  </view>
+
+</view>
+

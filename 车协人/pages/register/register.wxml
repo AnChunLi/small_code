@@ -1,0 +1,45 @@
+<!--pages/register/register.wxml-->
+<view class='body'>
+<view class='labels'>
+<label>姓名</label>
+<label>学号</label>
+<label>学院</label>
+<label>年级</label>
+<label>性别</label>
+<label>电话</label>
+<label>QQ</label>
+<label>宿舍</label>
+<label>密码</label>
+<label>确认</label>
+</view>
+
+<form bindsubmit="formSubmit" bindreset="formReset"report-submit="true">
+<input type='text'placeholder='填写姓名'name='name'></input>
+<input type='text'placeholder='填写学号'name='studentnumber'></input>
+ <picker bindchange="bindschoolChange" value="{{index}}"name='school' range="{{school}}">
+    <view class="picker">
+      {{school[index]}}
+    </view>
+  </picker>
+<input type='text'placeholder='填写年级,如2016'name='grade'>年级</input>
+<picker bindchange="bindgenderChange" name='gender'value="{{genderindex}}" range="{{gender}}">
+    <view class="picker">
+      {{gender[genderindex]}}
+    </view>
+  </picker>
+<input type='text'placeholder='填写电话'name='tel'></input>
+<input type='text'placeholder='填写QQ'name='qq'></input>
+<input type='text'placeholder='填写宿舍'name='sushe'></input>
+<input type='password'placeholder='请设置系统密码'name='password'></input>
+<input type='password'placeholder='再次确认密码'name='password2'></input>
+<view class='chooseimage'bindtap='chooseImage'><image src='../../image/image.png'></image><text>上传校园卡照片（不上传将影响审核）</text></view>
+<block wx:for="{{imageList}}" wx:for-item="image" wx:for-index='idx'>
+          <image class="img" src="{{image}}" data-id="{{idx}}" data-src="{{image}}" bindtap="previewImage"></image>
+</block>
+<view class="btn-area">
+    <button formType="submit"class='subbtn'>提交</button>
+    <button formType="reset">重填</button>
+   
+</view>
+</form>
+</view>

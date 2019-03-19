@@ -1,0 +1,46 @@
+/* pages/myorder/order.wxss */
+.body
+{
+  padding: 10px 0;
+}
+.top
+{
+  background-color:#eee;
+  width: 100%;
+  height: 40px;
+  display: flex;
+}
+.order
+{
+  width: 90%;
+  height: 100px;
+  background-color: #fff;
+  border-radius: 5px;
+  margin:10px 20px;
+  border: solid 1px #eee;
+}
+.time
+{
+  font-size: 15px;
+  margin-top: 2px;
+}
+.state
+{
+  margin-left: 42%;
+  font-weight: border;
+  font-size: 18px;
+  color: #1296db;
+  margin-top: 2px;
+}
+.text
+{
+  font-size: 16px;
+  color:  #000;
+}
+.noorder
+{
+  font-size: 15px;
+  color: #888;
+  text-align: center;
+  margin: 50% 0;
+}

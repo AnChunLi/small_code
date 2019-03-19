@@ -1,0 +1,29 @@
+<view class='body'>
+<view class='labels'>
+<label>学院</label>
+<label>年级</label>
+<label>电话</label>
+<label>QQ</label>
+<label>宿舍</label>
+</view>
+
+<form bindsubmit="formSubmit" bindreset="formReset">
+ <picker bindchange="bindschoolChange" value="{{member.school}}"name='school' range="{{school}}">
+    <view class="picker">
+      {{school[index]}}
+    </view>
+  </picker>
+<input type='text'placeholder='填写年级,如2016'name='grade'value='{{member.grade}}'>年级</input>
+<input type='text'placeholder='填写电话'name='tel'value='{{member.tel}}'></input>
+<input type='text'placeholder='填写QQ'name='qq'value='{{member.qq}}'></input>
+<input type='text'placeholder='填写宿舍'name='sushe'value='{{member.sushe}}'></input>
+<view class='chooseimage'bindtap='chooseImage'wx:if='{{member.schoolcard.length==0}}'><image src='../../image/image.png'></image><text>上传校园卡照片（不上传将影响审核）</text></view>
+<block wx:for="{{imageList}}" wx:for-item="image" wx:for-index='idx'>
+          <image class="img" src="{{image}}" data-id="{{idx}}" data-src="{{image}}" bindtap="previewImage"></image>
+</block>
+<view class="btn-area">
+    <button formType="submit"class='subbtn'>提交</button>
+</view>
+</form>
+</view>
+

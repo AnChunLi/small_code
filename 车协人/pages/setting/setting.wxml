@@ -1,0 +1,6 @@
+<!--pages/setting/setting.wxml-->
+<view class='list'>
+      <view class='level'bindtap='clear'><label>清除认证数据</label></view>
+      <view class='level'bindtap='updatepwd'><label>修改密码</label></view>
+      <!-- <view class='level'bindtap='updatecolor'><label>更换配色</label></view> -->
+</view>

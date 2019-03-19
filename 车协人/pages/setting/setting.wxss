@@ -1,0 +1,38 @@
+/* pages/setting/setting.wxss */
+.list
+{
+  margin: 0;
+  padding: 8px 0;
+  display:block;
+  background-color: #eee;
+  width: 100%;
+  height: 700px;
+}
+.level
+{
+  display:flex;
+  background-color: #fff;
+  width: 100%;
+  height: 35px;
+  margin: 10px auto;
+}
+.level label
+{
+  margin-left: 2%;
+}
+form label
+{
+  position: absolute;
+  z-index: 100;
+  left: 10px;
+}
+input
+{
+  padding-left: 40%;
+}
+.subbtn
+{
+  background-color: #1296db;
+  color: #ffffff;
+  margin: 10% 40%;
+}

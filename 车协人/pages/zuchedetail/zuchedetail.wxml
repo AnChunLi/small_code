@@ -1,0 +1,28 @@
+<!--pages/zuchedetail/zuchedetail.wxml-->
+<image class='top'src='https://1758541396.cn/{{bycycle.image}}'bindtap='previewimage'data-image='https://1758541396.cn/{{bycycle.image}}'></image>
+<view class='main'>
+  <view class='basepart'>
+    <view class='nameprice'>
+        <text class='name'>{{bycycle.name}}</text>
+        <view class='zucheprice'>￥{{bycycle.zucheprice}}</view>
+    </view>
+    <view class='remain'>剩余{{bycycle.remain}}</view>
+  </view>
+  <view class='detail'>原价：{{bycycle.price}}元</view>
+  <view class='shoptitle'>车店信息</view>
+  <view class='shop'>
+    <view>名称：{{bycycle.shop}}</view>
+    <view>电话：{{bycycle.tel}}</view>
+  </view>
+  <view class='call'bindtap='call'id='{{bycycle.tel}}'>拨打电话</view>
+  <view class='position'data-lat='{{bycycle.latitude}}'data-long='{{bycycle.longitude}}'data-name='{{bycycle.shop}}'bindtap='position'>查看车店位置</view>
+  <form bindsubmit="formSubmit">
+    <view class='zuche'>
+      租车期限<input type='text'placeholder='输入时间期限'name='time'></input>
+      <button formType="submit"class='subbtn'id='{{bycycle.id}}'>立即租车</button>
+    </view>
+  </form>
+  <view class='shoptitle'>免责说明</view>
+  <view class='mianzedetail'>本平台对自行车质量问题概不负责，自行车质量问题由租车商家负责，用户租车后的安全问题由个人承担责任，本平台概不负责。
+  </view>
+</view>

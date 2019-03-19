@@ -1,0 +1,67 @@
+/* pages/release/release.wxss */
+.background
+{
+  background-color: #eee;
+  width: 100%;
+  padding: 2% 0;
+}
+.release
+{
+  width: 90%;
+  margin: 8px 5%;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 2% 0;
+  display: inline-block;
+}
+.name
+{
+  margin-left: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1296db;
+}
+.time
+{
+  color: #888;
+  font-size: 10px;
+  margin-left: 5px;
+}
+.text
+{
+  margin: 5px 6%;
+  font-size: 15px;
+  word-break: break-all;
+  color:#000;
+}
+.addrelease
+{
+    position:fixed;
+    left: 80%;
+    top:80%;
+    width: 50px;
+    height: 50px;
+}
+.imagelist
+{
+  margin: 0 6%;
+}
+.imagelist image
+{
+  width: 100%;
+  border-radius: 5px;
+}
+.imagelist1
+{
+  margin: 0 1.5%;
+  display: inline;
+  padding: 0;
+}
+.imagelist1 image
+{
+  width: 30%;
+  height: 100px;
+  border-radius: 5px;
+  margin: 0;
+  display:inline-flex;
+}

@@ -1,0 +1,42 @@
+<!--pages/tuozhan/tuozhan.wxml-->
+<view class='body'>
+<form bindsubmit="formSubmit" bindreset="formReset"report-submit="true">
+<label>玩过的车型</label>
+<picker bindchange="bindbikeChange" value="{{bikeindex}}"name='bike' range="{{bike}}">
+    <view class="picker">
+      {{bike[bikeindex]}}
+    </view>
+  </picker>
+<label>你有兴趣加入武大公路车队吗？</label>
+<picker bindchange="bindjoinChange" value="{{joinindex}}"name='join' range="{{shifou}}">
+    <view class="picker">
+      {{shifou[joinindex]}}
+    </view>
+  </picker>
+  <label>你有没有在马路上骑车的经验？</label>
+<picker bindchange="bindcycleChange" value="{{cycleindex}}"name='cycle' range="{{shifou}}">
+    <view class="picker">
+      {{shifou[cycleindex]}}
+    </view>
+  </picker>
+<label>最长的一次骑行里程多少？</label>
+<input type='text'placeholder='填写最长的骑行里程'name='distance'></input>
+ <label>你有没有兴趣做管理层，参与车协管理工作？</label>
+<picker bindchange="joinguanliChange" value="{{joinguanliindex}}"name='joinguanli' range="{{shifou}}">
+    <view class="picker">
+      {{shifou[joinguanliindex]}}
+    </view>
+  </picker>
+  <label>是否为港澳台学生/留学生？</label>
+<picker bindchange="gatChange" value="{{gatindex}}"name='gat' range="{{shifou}}">
+    <view class="picker">
+      {{shifou[gatindex]}}
+    </view>
+  </picker>
+<view class="btn-area">
+    <button formType="submit"class='subbtn'>提交</button>
+   
+</view>
+</form>
+</view>
+

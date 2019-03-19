@@ -1,0 +1,13 @@
+<!--pages/myorder/order.wxml-->
+<view class='body'wx:if='{{order!=0}}'>
+  <view class='order'wx:for="{{order}}">
+    <view class='top'>
+      <view class='time'wx:if='{{item[3]==0}}'>{{item[1]}}</view>
+      <view class='time'wx:else>{{item[2]}}</view>
+      <view class='state'wx:if='{{item[3]==0}}'>未处理</view>
+      <view class='state'wx:else>已完成</view>
+    </view>
+    <view class='text'>{{item[0]}}</view>
+  </view>
+</view>
+<view wx:else class='noorder'>你暂时没有预约记录！</view>

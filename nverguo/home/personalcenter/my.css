@@ -1,0 +1,95 @@
+            body
+	    	{
+	    		 margin-top: 51px;
+	    		 background-image: url(../public/img/bgpic.jpg);
+	    	}
+	    	.box
+	    	{
+	    		width: 30%;
+	    		/*height: 600px;*/
+	    		border: solid 3px orangered;
+	    		border-radius: 10px;
+	    		margin: 5% auto;
+	    		background-color: #fff;
+	    	}
+	    	.ziliao
+	    	{
+	    		margin: 10% 0;
+	    	}
+	    	.item
+	    	{
+	    		margin: 15px 10%;
+	    	}
+	    	.item .information
+	    	{
+	    		margin: 5px 10%;
+	    		color: #000;
+	    	}
+	    	.complete
+	    	{
+	    		margin: 10px 39%;
+	    		
+	    	}
+	    	h3
+	    	{
+	    		text-align: center;
+	    		color: #000;
+	    		margin-top: 10px;
+	    	}
+	    	.head .information img
+	    	{
+	    		border: solid 2px orangered;
+	    		border-radius: 50%;
+	    		width: 80px;height: 80px;
+	    		margin-left: 34.5%;
+	    	}
+	    	.name
+	    	{
+	    		text-align: center;
+	    		font-size: 20px;
+	    		font-weight: bold;
+	    	}
+	    	.gender
+	    	{
+	    		text-align: center;
+	    		font-size: 20px;
+	    	}
+	    	.smallbox
+	    	{
+	    		background-color: #eee;
+	    		border-radius: 10px;
+	    		margin-left: 13%;
+	    	}
+	    	.minbox1
+	    	{
+	    		border-bottom: dashed 1px #000;
+	    	}
+	    	.minbox .item
+	    	{
+	    		width: 40%;
+	    		text-align: center;
+	    		margin: 5px 15% 0 15%;
+	    		padding: 5%;
+	    	}
+	    	.minbox .item h3
+	    	{
+	    		color: orangered;
+	    	}
+	    	.minbox .item .information
+	    	{
+	    		font-size: 10px;
+	    	}
+	    	.receive th
+	    	{
+	    		color: orangered;
+	    	}
+	    	.receive td
+	    	{
+	    		border-bottom: dashed 1px #eee;
+	    		
+	    	}
+	    	#loading
+	    	{
+	    		margin: 5% 40%;
+	    	}
+	    	

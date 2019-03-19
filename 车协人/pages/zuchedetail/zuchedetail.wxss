@@ -1,0 +1,96 @@
+/* pages/zuchedetail/zuchedetail.wxss */
+.top
+{
+  width: 100%;
+  height: 280px;
+}
+.main
+{
+  background-color:#eee;
+  position: absolute;
+  z-index: 1;
+}
+.basepart
+{
+  background-color: #fff;
+  width: 100%;
+  display: flex;
+}
+.nameprice
+{
+  display: block;
+  margin-left: 10px;
+  width: 30%;
+}
+.name
+{
+  font-size: 20px;
+  font-weight: 600;
+  margin: 5px 0;
+}
+.zucheprice
+{
+  margin: 5px 0;
+  color: orangered;
+  font-size: 20px;
+  font-weight: 600;
+}
+.remain
+{
+  margin-left: 45%;
+  margin-top: 5%;
+  color: orangered;
+}
+.detail
+{
+  margin: 10px 0;
+  color: #888;
+  background-color: #fff;
+}
+.shoptitle
+{
+  margin: 1px 0;
+  color: #888;
+  background-color: #fff;
+}
+.shop
+{
+  margin: 1px 0;
+  font-size: 15px;
+  background-color: #fff;
+  color: #888;
+}
+.call
+{
+  margin: 10px 0;
+  background-color: #fff;
+  color: #888;
+}
+.position
+{
+  margin: 10px 0;
+  background-color: #fff;
+  color: #888;
+}
+.zuche
+{
+  background-color: #fff;
+  margin: 10px 0;
+}
+.subbtn
+{
+  position: fixed;
+  bottom: 0px;
+  z-index: 2;
+  background-color: #1296db;
+  color: #fff;
+  font-weight: 600;
+  width: 100%;
+}
+.mianzedetail
+{
+  margin-bottom: 50px;
+  font-size: 15px;
+  background-color: #fff;
+  color: #888;
+}

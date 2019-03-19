@@ -1,0 +1,18 @@
+<!--index.wxml-->
+<view wx:for='{{list}}'class='item'>
+  <view><image src='https://1758541396.cn/{{item.image}}'class='activityimg'bindtap='previewimage'data-image='https://1758541396.cn/{{item.image}}'></image></view>
+  <view class='list-main'>
+    <text class='title'bindtap='text'data-text='{{item.text}}'>{{item.title}}</text>
+    <view class='position'bindtap='go'data-lat='{{item.lat}}'data-long='{{item.long}}'data-place='{{item.place}}'>
+      <image src='../../image/position1.png'></image>
+      <text>{{item.place}}</text>
+    </view>
+  </view>
+  <view class='right'>
+     <text class='time'wx:if='{{nowtime<item.overtime}}'>{{item.starttime}}</text>
+     <text class='overtime'wx:elif='{{nowtime>item.overtime}}'>已结束</text>
+  <view class='go'bindtap='go'data-lat='{{item.lat}}'data-long='{{item.long}}'data-place='{{item.place}}'>
+    <image src='../../image/go.png'></image>
+  </view>
+  </view>
+</view>

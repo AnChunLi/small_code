@@ -1,0 +1,16 @@
+<!--pages/addrelease/addrelease.wxml-->
+<view class='body'>
+  <form bindsubmit="formSubmit">
+    <textarea class='textarea'name='text'placeholder='输入发布内容'></textarea>
+    <view class='bottom'>
+      <image src='../../image/addimage.png'class='addimage'bindtap='addimage'></image>
+      <button formType="submit"class='btn'>
+            <image src='../../image/publish.png'></image>
+            <text>发布</text> 
+      </button>
+    </view>
+  </form>
+  <view wx:for="{{imageList}}" wx:for-item="image" wx:for-index='idx'class='block'>
+    <image class="img" src="{{image}}" data-id="{{idx}}" data-src="{{image}}" ></image>
+  </view>
+</view>

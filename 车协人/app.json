@@ -1,0 +1,68 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/my/my",
+    "pages/register/register",
+    "pages/member/member",
+    "pages/login/login",
+    "pages/setting/setting",
+    "pages/vip/vip",
+    "pages/repair/repair",
+    "pages/myorder/order",
+    "pages/application/application",
+    "pages/map/map",
+    "pages/changepassword/changepassword",
+    "pages/changecolor/changecolor",
+    "pages/zuche/zuche",
+    "pages/zuchedetail/zuchedetail",
+    "pages/myzuche/myzuche",
+    "pages/myinformation/myinformation",
+    "pages/updateinformation/updateinformation",
+    "pages/tuozhan/tuozhan",
+    "pages/release/release",
+    "pages/addrelease/addrelease"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#1296db",
+    "navigationBarTitleText": "车协人",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar":{
+    "color": "#000;",
+    "selectedColor": "#1296db",
+     "list":[
+       {
+        "pagePath": "pages/index/index",
+        "iconPath": "image/Bicycle.png",
+        "selectedIconPath": "image/Bicycle1.png",
+        "text": "活动"
+      },
+       {
+       "pagePath":"pages/vip/vip",
+       "iconPath":"image/vip.png",
+       "selectedIconPath":"image/vip1.png",
+       "text":"会员"
+     },
+     {
+      "pagePath": "pages/release/release",
+      "iconPath": "image/comment.png",
+      "selectedIconPath": "image/comment1.png",
+      "text": "骑闻"
+    },
+     {
+      "pagePath": "pages/application/application",
+      "iconPath": "image/application.png",
+      "selectedIconPath": "image/application1.png",
+      "text": "应用"
+    },
+     {
+      "pagePath": "pages/my/my",
+      "iconPath": "image/user1.png",
+      "selectedIconPath": "image/user.png",
+      "text": "我的"
+    }]
+  }
+  
+}

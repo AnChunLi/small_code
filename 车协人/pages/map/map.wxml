@@ -1,0 +1,2 @@
+<!--pages/map/map.wxml-->
+<map  show-location longitude='114.363599'latitude='30.539754'show-compass='true'markers="{{markers}}"bindmarkertap="markertap"bindcallouttap="markerid"id="myMap"/>

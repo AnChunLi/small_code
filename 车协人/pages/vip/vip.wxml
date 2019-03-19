@@ -1,0 +1,57 @@
+<!--pages/vip/vip.wxml-->
+<view class='list'>
+  <view wx:for="{{user}}"class='item'bindtap="turnmember"id="{{item.id}}">
+    <view class='name'>{{item.name}}</view>
+    <view class='grade'>{{item.grade}}级</view>
+    <view class='school'wx:if="{{item.school==0}}">资环</view>
+    <view class='school'wx:if="{{item.school==1}}">遥感</view>
+    <view class='school'wx:if="{{item.school==2}}">测绘</view>
+    <view class='school'wx:if="{{item.school==3}}">印包</view>
+    <view class='school'wx:if="{{item.school==4}}">生科</view>
+    <view class='school'wx:if="{{item.school==5}}">物院</view>
+    <view class='school'wx:if="{{item.school==6}}">化院</view>
+    <view class='school'wx:if="{{item.school==7}}">电信</view>
+    <view class='school'wx:if="{{item.school==8}}">计院</view>
+    <view class='school'wx:if="{{item.school==9}}">数院</view>
+    <view class='school'wx:if="{{item.school==10}}">新传</view>
+    <view class='school'wx:if="{{item.school==11}}">社会</view>
+    <view class='school'wx:if="{{item.school==12}}">历史</view>
+    <view class='school'wx:if="{{item.school==13}}">文院</view>
+    <view class='school'wx:if="{{item.school==14}}">政管</view>
+    <view class='school'wx:if="{{item.school==15}}">马院</view>
+    <view class='school'wx:if="{{item.school==16}}">哲院</view>
+    <view class='school'wx:if="{{item.school==17}}">国学</view>
+    <view class='school'wx:if="{{item.school==18}}">信管</view>
+    <view class='school'wx:if="{{item.school==19}}">经管</view>
+    <view class='school'wx:if="{{item.school==20}}">法院</view>
+    <view class='school'wx:if="{{item.school==21}}">外院</view>
+    <view class='school'wx:if="{{item.school==22}}">动机</view>
+    <view class='school'wx:if="{{item.school==23}}">药院</view>
+    <view class='school'wx:if="{{item.school==24}}">基医</view>
+    <view class='school'wx:if="{{item.school==25}}">健康</view>
+    <view class='school'wx:if="{{item.school==26}}">口腔</view>
+    <view class='school'wx:if="{{item.school==27}}">电气</view>
+    <view class='school'wx:if="{{item.school==28}}">水院</view>
+    <view class='school'wx:if="{{item.school==29}}">艺术</view>
+    <view class='school'wx:if="{{item.school==30}}">城设</view>
+    <view class='school'wx:if="{{item.school==31}}">土建</view>
+    <view class='school'wx:if="{{item.school==32}}">国软</view>
+    <view class='school'wx:if="{{item.school==33}}">弘毅</view>
+
+    <view class='level'wx:if='{{item.level==1}}'>基本成员</view>
+    <view class='level'wx:elif='{{item.level==2}}'>进阶成员</view>
+    <view class='level'wx:elif='{{item.level==3}}'>老会员</view>
+    <view class='level'wx:elif='{{item.level==4}}'>前管理层</view>
+    <view class='level'wx:elif='{{item.level==5}}'>车队成员</view>
+    <view class='level'wx:elif='{{item.level==6}}'>友校大佬</view>
+    <view class='level'wx:elif='{{item.level==7}}'>友校高层</view>
+    <view class='level'wx:elif='{{item.level==8}}'>部长</view>
+    <view class='level'wx:elif='{{item.level==9}}'>副会长</view>
+    <view class='level'wx:elif='{{item.level==10}}'>会长</view>
+  </view>
+  <view wx:if='{{isregister!=1}}'>
+    <button bindtap="turn"class='register'><text>登记</text></button>
+  </view>
+  <text class='num'>共{{num}}位会员</text>
+</view>
+

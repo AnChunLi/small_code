@@ -1,0 +1,34 @@
+/* pages/zuche/zuche.wxss */
+.bycyclelist
+{
+  width: 90%;
+  height: 120px;
+  margin: 10px 5%;
+  background-color: #eee;
+  display: flex;
+  border-radius: 5px;
+}
+.bycyclelist image
+{
+  width: 150px;
+  height: 120px;
+  border-radius: 5px;
+}
+.main
+{
+  margin-left: 30px;
+  display: block;
+}
+.name
+{
+  margin-top: 5px;
+  font-weight: 600;
+  color: #1296db;
+  font-size: 25px;
+}
+.zucheprice
+{
+  margin-top: 40%;
+  color: orangered;
+  font-weight: 600;
+}

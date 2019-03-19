@@ -1,0 +1,44 @@
+/* pages/application/application.wxss */
+.top
+{
+  background-color: #1296db;
+  padding: 10px 0 20px 0;
+}
+swiper
+{
+  margin:10px 8%;
+}
+swiper, block, swiper-item, image
+{
+  height: 120px;
+  border-radius: 5px;
+}
+.applist
+{
+  padding: 0 4%;
+  display: flex;
+}
+.item
+{
+  margin: 10px;
+  width: 60px;
+}
+.logo
+{
+  background-color: #1296db;
+  width: 60px;
+  height:60px;
+  border-radius: 3px;
+}
+.logo image
+{
+  width: 45px;
+  height: 45px;
+  margin: 14%;
+}
+.text
+{
+  font-size: 12px;
+  color:	#4F4F4F;
+  text-align: center;
+}

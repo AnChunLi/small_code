@@ -1,0 +1,16 @@
+<!--pages/login/login.wxml-->
+<view>
+  <image src='../../image/userlogin.png'></image>
+  <text>身份认证</text>
+</view>
+<view class='login'>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <input type='text'class='input1'placeholder='填写学号'name='studentnumber'></input>
+    <input type='password'placeholder='填写密码'name='password'></input>
+    <view class="btn-area">
+        <button formType="submit"class='subbtn'>认证</button>
+        <button bindtap='register'class='register'>入会登记</button>
+    </view>
+  </form>
+</view>
+

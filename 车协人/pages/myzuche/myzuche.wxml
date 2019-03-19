@@ -1,0 +1,15 @@
+<!--pages/myzuche/myzuche.wxml-->
+<view class='body'wx:if='{{order!=0}}'>
+  <view class='order'wx:for="{{order}}">
+    <view class='top'>
+      <view class='time'wx:if='{{item[4]==0}}'>{{item[1]}}</view>
+      <view class='time'wx:elif='{{item[4]==1}}'>{{item[3]}}</view>
+      <view class='time'wx:elif='{{item[4]==2}}'>{{item[2]}}</view>
+      <view class='state'wx:if='{{item[4]==0}}'>未取车</view>
+      <view class='state'wx:elif='{{item[4]==1}}'>租赁中</view>
+      <view class='state'wx:elif='{{item[4]==2}}'>已还车</view>
+    </view>
+    <view class='text'>租车期限：{{item[0]}}</view>
+  </view>
+</view>
+<view wx:else class='noorder'>你暂时没有租车记录！</view>

@@ -1,0 +1,21 @@
+<!--pages/release/release.wxml-->
+<view class='background'>
+  <view class='release'wx:for='{{release}}'>
+    <view class='name'>{{item.name}}</view>
+    <view class='time'>{{item.time}}</view>
+    <view class='text'>{{item.text}}</view>
+    <!-- 图片渲染 -->
+    <!-- 单张图片 -->
+    <view class='imagelist'wx:if='{{item[0].length==1&&item[0][0]!=0}}'>
+      <image src='https://1758541396.cn/{{item[0][0]}}'bindtap="previewImage"data-id="https://1758541396.cn/{{item[0][0]}}"></image>
+    </view>
+    <!-- 多张图片，但小于9张 -->
+    <view wx:elif='{{item[0].length>1&&item[0].length<10}}'>
+      <view class='imagelist1'wx:for='{{item[0]}}'>
+        <image src='https://1758541396.cn/{{item}}'bindtap="previewImage"data-id="https://1758541396.cn/{{item}}"></image>
+      </view>
+    </view>
+     
+  </view>
+</view>
+<image class='addrelease'src='../../image/release.png'bindtap='turnaddrelease'></image>

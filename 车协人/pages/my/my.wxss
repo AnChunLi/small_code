@@ -1,0 +1,72 @@
+/* pages/my/my.wxss */
+.top
+{
+  background-color: #1296db;
+  width:100%;
+  height: 100px;
+  padding: 0.5% 0;
+}
+.bottom
+{
+  background-color: #eee;
+  width:100%;
+  height:528px;
+}
+.userinfo-avatar
+{
+  width: 80px;
+  height: 80px;
+  margin: 14% 38%;
+  border-radius: 50%;
+  display: block;
+  overflow: hidden;
+}
+.nickname
+{
+  color: #fff;
+  position: absolute;
+  left:43%;
+  top:3%;
+  font-size: 20px;
+  font-weight: bold;
+}
+.name
+{
+  color: #fff;
+  position: absolute;
+  left:41%;
+  top:3%;
+  font-size: 20px;
+  font-weight: bold;
+}
+.box
+{
+  background-color:#1296db;
+  width: 80%;
+  position: absolute;
+  top:25%;
+  left: 10%;
+  border-radius: 10px;
+}
+.inline
+{
+  background-color: #1296db;
+  color: #fff;
+  width: 80%;
+  height: 35px;
+  margin: 5px auto;
+}
+.row
+{
+border-bottom: 1rpx #fff solid;
+}
+.level
+{
+  margin-left: 39%;
+  font-size: 17px;
+}
+.iflevel
+{
+  padding: 0;
+  margin: 0;
+}

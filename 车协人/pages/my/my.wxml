@@ -1,0 +1,40 @@
+<!--pages/my/my.wxml-->
+<view class='top'>
+  <view class="name"wx:if='{{userid}}'bindtap='myinformation'>{{member.name}}</view>
+  <view class="nickname"wx:else>
+    <open-data type="userNickName" lang="zh_CN"></open-data>
+  </view>  
+  <view class="userinfo-avatar"bindtap='myinformation'>
+  <open-data type="userAvatarUrl"></open-data>
+  
+  </view>
+</view> 
+<view class='bottom'>
+  <view class='box'>
+    <view class='inline row'bindtap='login'data-id='{{userid}}'>
+      <label>身份认证</label>
+      <text wx:if='{{userid}}'class='level'>已认证</text>
+      <text wx:else class='level'>未认证</text>
+    </view>
+    <view class='inline row '>
+      <label>会员等级</label>
+        <text class='level'wx:if='{{member.level==1&&userid}}'>基本成员</text>
+        <text class='level'wx:elif='{{member.level==2&&userid}}'>进阶成员</text>
+        <text class='level'wx:elif='{{member.level==3&&userid}}'>老会员</text>
+        <text class='level'wx:elif='{{member.level==4&&userid}}'>前管理层</text>
+        <text class='level'wx:elif='{{member.level==5&&userid}}'>车队成员</text>
+        <text class='level'wx:elif='{{member.level==6&&userid}}'>友校大佬</text>
+        <text class='level'wx:elif='{{member.level==7&&userid}}'>友校高层</text>
+        <text class='level'wx:elif='{{member.level==8&&userid}}'>部长</text>
+        <text class='level'wx:elif='{{member.level==9&&userid}}'>副会长</text>
+        <text class='level'wx:elif='{{member.level==10&&userid}}'>会长</text>
+        <text class='level'wx:elif='{{!userid}}'></text>
+        <text class='level'wx:else>未审核</text>
+    </view>
+    <view class='inline row'bindtap='myorder'data-id='{{userid}}'><label>我的预约</label></view>
+    <view class='inline row'bindtap='myzuche'data-id='{{userid}}'><label>租车记录</label></view>
+    <view class='row inline'bindtap='setting'data-id='{{userid}}'><label>系统设置</label></view>
+    <view class='inline'bindtap='about'><label>关于我们</label></view>
+  </view>
+</view>
+

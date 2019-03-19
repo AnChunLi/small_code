@@ -1,0 +1,11 @@
+<!--pages/repair/repair.wxml-->
+<view>
+  <image src='../../image/repairlogo.png'></image>
+  <text>维修预约</text>
+</view>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+  <textarea required class='order'name='text'placeholder='请说明故障内容,并注明希望在哪里维修（仅限武大校内)以及维修时间，我们会尽快安排人手，谢谢。最终维修地点未必与请求一致，请见谅。维修可能需要收取一定费用。'></textarea>
+    <view class="btn-area">
+        <button formType="submit"class='subbtn'>一键预约</button>
+    </view>
+  </form>
