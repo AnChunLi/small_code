@@ -1,0 +1,168 @@
+*{
+    margin:0;
+    padding: 0;
+}
+body{
+    background-color: #eeeeee;
+}
+
+/* 第一部分 *********************************************************/
+.pageTop{
+    display: flex;
+    flex-direction: row;
+    background-color: #393D49;
+    width:100%;
+    height:630px;
+    position:absolute;
+    z-index: 0;
+    top:0;
+    left:0;
+}
+.mineImage{
+    background-image: url(static/img/me.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width:50%;
+    height: 100%;
+    transform: rotate(45);
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 50%;
+    /* background-position-x: 100%; */
+    opacity: 0.6;
+}
+/* 左边区域 */
+.pageLeft{
+    width:37%;
+    height:100%;
+    /* margin: 210px 10%; */
+}
+.pageLeft div{
+    width: 80%;
+    height: 60%;
+    margin:30% 2% 10% 18%;
+}
+/* 中部区域 */
+.pageCenter{
+    width:26%;
+    height: 100%;
+    /* margin: 0 35%; */
+    background-color: #009688;
+}
+/* 右边区域 */
+.pageRight{
+    width:37%;
+    height:100%;
+    /* margin: 210px 10%; */
+}
+.pageRight h5{
+    color:#fff;
+    text-align: center;
+    margin: 20% 0 0 0;
+}
+.pageRight div{
+    color:#fff;
+    text-align: left;
+    width:60%;
+    margin:10% 20%;
+    font-size:10px;
+}
+.pageRight div p{
+    margin: 20px 0;
+}
+.pageTop h1{
+    color: #fff;
+    margin:20px 0;
+}
+.pageCenter-item{
+    display: flex;
+    justify-content: left;
+    width:68%;
+    color: #fff;    
+    margin:20px 10% 0 22%;
+    text-align:center;
+}
+
+/* 第二部分******************************************************/
+.pageMiddle{
+    /* display: flex;
+    flex-direction: row; */
+    background-color: #eee;
+    width:100%;
+    height:630px;
+    position:absolute;
+    z-index: 0;
+    top:630px;
+    left:0;
+}
+.project{
+    display: flex;
+    width:100%;
+    height:314px;
+}
+.project .image{
+    width:30%;
+    height:100%;
+}
+.project .image img{
+    width:40%;
+    height:90%;
+    margin:5% 30%;
+}
+.project .content{
+    width:70%;
+    height:100%;
+} 
+.project .content h3{
+    margin-top:3%;
+    text-align: center;
+}
+.project .content div{
+    width:80%;
+    margin:2% 10% 0 10%;
+    font-size:13px;
+}
+.project .content div p{
+    margin:15px 0;
+}
+.project .content .getcode{
+    display:flex;
+    width:14%;
+    height:40px;
+    margin:0 43%;
+    background-color: #009688;
+    font-size:20px;
+    font-style: oblique;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* 分割线 */
+.fengge{
+    width:90%;
+    height:3px;
+    margin:0 5%;
+    background-color:#009688;
+}
+.zhegai{
+    width:100%;
+    background-color:#000;
+    opacity: 0.6;
+    position: absolute;
+    z-index: 1;
+}
+/* 二维码弹框 */
+.modal{
+    width:100px;
+    height:100px;
+    position: fixed;
+    z-index: 2;
+    top:100px;
+    left:480px;
+}
+.modal img{
+    border-radius:10px;
+}
