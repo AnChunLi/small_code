@@ -1,0 +1,27 @@
+<!--mine/pages/game/kouzhao.wxml-->
+<title-bar title="口罩头像生成器" bgColor="#FFE411" />
+
+<canvas wx:if="{{headImg && !isShare}}" style="width:90vw;height:90vw;margin:5vw;" canvas-id="mycanvas" bindtouchstart="touchstart" bindtouchmove="move" bindtouchend="touchend"></canvas>
+
+<view wx:else style="width:90%;height:90vw;background-color:#f5f7f9;margin:5vw;">
+  <view style="width:20vw;height:20vw;background:#FFE411;border-radius:50%;position:relative;top:35vw;left:35vw;font-size:10vw;;font-weight:700;color:#fff;border:4px solid #FFF4A4;box-sizing:border-box;display:flex;align-items:center;justify-content:center;"
+    bindtap="addHead">+</view>
+  <view style="box-sizing:border-box;color:#222;font-size:14px;position:relative;top:38vw;text-align:center;">点击添加头像</view>
+</view>
+
+<!-- 选择口罩 -->
+<view style="background:#eee;width:100%;height:100px;overflow-x:scroll;white-space:nowrap;overflow-y:hidden;">
+  <image wx:for="{{kouzhaoList}}" wx:key="{{index}}" src="{{item}}" style="width:120px;height:100%;margin:0 2px;border-radius:10px;" bindtap="selectKouzhao" data-src="{{item}}"></image>
+</view>
+
+<!-- 遮盖层 -->
+<view wx:if="{{isShare}}" style="position:fixed;z-index:1000;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.6);" bindtap="cancelShare">
+  <canvas style="width:80vw;height:123.7vw;margin:30vw 10vw 0 10vw;" canvas-id="canvas"></canvas>
+  <view style="width:50vw;height:40px;margin:20px 25vw;background:#fff;color:#000;text-align:center;line-height:40px;border-radius:20px;"bindtap="saveShare">保存图片至相册</view>
+</view>
+
+<view style="width:40vw;height:40px;margin:20px 30vw;background:#FFE411;color:#fff;text-align:center;line-height:40px;border-radius:10px;"bindtap="save">生成并保存头像</view>
+
+<view style="width:40vw;height:40px;margin:20px 30vw;background:#FFE411;color:#fff;text-align:center;line-height:40px;border-radius:10px;"bindtap="share">分享至朋友圈</view>
+
+<view style="width:40vw;height:40px;margin:20px 30vw;background:#FFE411;color:#fff;text-align:center;line-height:40px;border-radius:10px;"bindtap="intoHome">逛逛小程序</view>

@@ -1,0 +1,4 @@
+/* mine/pages/game/kouzhao.wxss */
+Page{
+  background: #fff;
+}

@@ -42,18 +42,22 @@
                     <h5>1758541396@qq.com</h5>
             </div>
             <div class="pageCenter-item">
+                <img src="static/icon/blog.png"style="width:20px;height:20px;margin-right:20px;">
+                <h5 title="博客"><a href="https://anchunli.github.io/"target="_black"style="color:#fff;">https://anchunli.github.io/</a></h5>
+        </div>
+            <div class="pageCenter-item">
                     <img src="static/icon/github.png"style="width:20px;height:20px;margin-right:20px;">
-                    <h5 title="码云地址"><a href="https://gitee.com/lianchun"target="_black"style="color:#fff;">https://gitee.com/lianchun</a></h5>
+                    <h5 title="GitHub"><a href="https://github.com/AnChunLi"target="_black"style="color:#fff;">https://github.com/AnChunLi</a></h5>
             </div>
         </div>
         <div class="pageRight">
             <h5>开发技能</h5>
             <div>
-                <p>熟悉HTML5/CSS3/JS Web客户端开发语言， 了解bootstrap/layui, jQuery/vue.js等前端开发框架。</p>
+                <p>熟悉HTML5/CSS3/JS 前端开发语言， 熟悉Vue.js、Node.js、JQuery等技术栈</p>
                 <p>了解ES6，了解计算机网络和数据结构相关知识，了解webpack模块化打包工具。</p>
-                <p>熟悉PHP服务端脚本语言，了解MySQL数据库开发语言，了解Redis服务端缓存器，了解并使用过git工具进行代码版本控制。</p>
+                <p>熟悉PHP服务端脚本语言，了解MySQL数据库开发语言，了解Redis非关系型数据库，熟悉并使用过git工具进行代码版本控制。</p>
                 <p>熟悉微信小程序开发，拥有全栈开发能力</p>
-                <p>了解 Java Web servlet开发。</p>
+                <p>了解 Java Web开发。</p>
             </div>
         </div>
     </section>
@@ -100,7 +104,7 @@
     <div class="zhegai"></div>
 
     <div class="modal">
-        <img src="static/img/code.png" alt="">
+        <img src="static/img/code.png" alt="小程序码" style="width:300px;height:300px;">
     </div>
     <!-- <div class="mineImage">
 
@@ -114,10 +118,13 @@
         $('.modal').hide();
         $('#preview_zs').click(function(){
             $('.zhegai').show();
+            $('.modal>img').attr('src','static/img/code.png');
             $('.modal').show();
         })
         $('#preview_wy').click(function(){
-            alert("正在开发中..");
+            $('.zhegai').show();
+            $('.modal>img').attr('src','static/img/code2.jpg');
+            $('.modal').show();
         })
 
         $('.zhegai').click(function(){
